@@ -1,0 +1,54 @@
+---
+import '@fontsource/m-plus-rounded-1c/400.css'
+import '@fontsource/m-plus-rounded-1c/700.css'
+import '@fontsource/jetbrains-mono';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="flex flex-col min-h-screen">
+        <header>
+            <nav class="flex justify-between max-w-4xl mx-auto">
+                <div>
+                    <h1 class="text-3xl font-bold">rm.</h1>
+                </div>
+                <div class="">
+                    <ul class="flex flex-row space-x-6">
+                        <li>Posts</li>
+                        <li>Contact</li>
+                        <li>GitHub GhIcon</li>
+                        <button>NightIcon</button>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow">
+            <article class="max-w-3xl mx-auto">
+              <slot/> <!-- your content is injected here -->
+            </article>
+        </main>
+        <footer class="flex justify-center">
+            &copy; {new Date().getFullYear()} Rubén Maté
+        </footer>
+    </body>
+</html>
+<style>
+h1 {
+    font-family: 'M Plus Rounded 1c', sans-serif;
+}
+body {
+  font-family: 'JetBrains Mono', monospace;
+}
+</style>
