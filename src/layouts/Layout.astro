@@ -21,9 +21,7 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col min-h-screen">
-        <header>
-            <Navbar />
-        </header>
+        <Navbar />
         <main class="flex-grow">
             <article class="max-w-3xl mx-auto">
               <slot/> <!-- your content is injected here -->

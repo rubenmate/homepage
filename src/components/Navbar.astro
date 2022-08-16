@@ -1,19 +1,35 @@
 ---
 import { IoMoon,/* IoSunnyOutline, */IoLogoGithub } from "react-icons/io5";
 ---
-<nav class="flex justify-between items-center max-w-4xl mx-auto p-2">
-    <div>
-        <h1 class="text-4xl font-bold font-['M_Plus_Rounded_1c']">rm.</h1>
-    </div>
-    <div class="">
-        <ul class="flex flex-row items-center space-x-6 font-semibold">
-            <li>Posts</li>
-            <li>Contact</li>
-            <li class="flex items-center space-x-1">
-                <IoLogoGithub/>
-                <span>GitHub</span>
-            </li>
-            <button class="p-3 bg-violet-700 rounded-md text-white"><IoMoon/></button>
-        </ul>
-    </div>
-</nav>
+<header class="fixed z-10 w-full">
+    <nav class="flex justify-between items-center max-w-4xl mx-auto p-2 backdrop-blur-md">
+        <div class="px-2 py-1 rounded-md hover:bg-gray-100">
+            <a href="/">
+                <h1 class="text-4xl font-bold font-['M_Plus_Rounded_1c']">rm.</h1>
+            </a>
+        </div>
+        <div>
+            <ul class="flex flex-row items-center space-x-5 font-semibold">
+                <li class="hover:underline">
+                    <a href="/posts">Posts</a>
+                </li>
+                <li class="hover:underline">
+                    <a href="/contact">Contact</a>
+                </li>
+                <li class="hover:underline">
+                    <a 
+                        href="https://github.com/rubenmate" 
+                        target="_blank" 
+                        class="flex items-center space-x-1">
+                        <IoLogoGithub/>
+                        <span>GitHub</span>
+                    </a>
+                </li>
+                <button class="p-3 bg-violet-700 rounded-md text-white hover:bg-opacity-80">
+                    <IoMoon/>
+                </button>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="h-16" />
