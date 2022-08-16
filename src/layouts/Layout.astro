@@ -24,11 +24,11 @@ const { title } = Astro.props as Props;
         <Navbar />
         <main class="flex-grow">
             <article class="max-w-3xl mx-auto">
-              <slot/> <!-- your content is injected here -->
+              <slot/>
             </article>
         </main>
         <footer class="flex justify-center">
-            &copy; {new Date().getFullYear()} Rubén Maté
+            &copy; {new Date().getFullYear()} Rubén Maté | Design inspired by crafztdog
         </footer>
     </body>
 </html>
