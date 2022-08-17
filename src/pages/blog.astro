@@ -1,0 +1,35 @@
+---
+import Heading from "../components/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+<Layout title="ruben-mate">
+    <section>
+        <Heading title="Blog" />
+        <div class="h-5"/>
+        <content>
+            <ul class="w-11/12 mx-auto">
+                {posts.map((post) => (
+                    <a href={post.url}>
+                        <li class="flex flex-col mb-4 w-10/12 p-2 rounded-md hover:bg-primaryLight
+                            hover:bg-opacity-10">
+                            <h2 class="font-bold text-2xl">{post.frontmatter.title}</h2>
+                            <p>{post.frontmatter.description}</p>
+                            <time class="text-sm opacity-60" datetime={post.frontmatter.pubDate}>
+                                {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric',
+                                })}
+                            </time>
+                        </li>
+                    </a>
+                ))}
+            </ul>
+        </content>
+    </section>
+</Layout>
