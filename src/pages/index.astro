@@ -1,5 +1,5 @@
 ---
-import { IoArrowForward } from "react-icons/io5/index"
+import { IoArrowForward, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5/index"
 
 import Layout from '../layouts/Layout.astro';
 import AvatarImage from '../components/AvatarImage.astro';
@@ -54,9 +54,25 @@ import Button from "../components/Button.astro";
     <section>
         <Heading title="Web presence" />
         <div class="h-3"/>
-        <ul>
-            <li><a href="">GhIcon @rubenmate</a></li>
-            <li><a href="">LInIcon @ruben-mate</a></li>
+        <ul class="w-11/12 mx-auto flex flex-row space-x-6">
+            <li>
+                <a
+                    href="https://github.com/rubenmate" target="_blank" 
+                    class="flex flex-row items-center text-lg text-primaryLight hover:bg-primaryLight 
+                    p-2 hover:bg-opacity-10 hover:rounded-md"
+                >
+                    <IoLogoGithub /><span class="ml-2">@rubenmate</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/ruben-mate" target="_blank" 
+                    class="flex flex-row items-center text-lg text-primaryLight hover:bg-primaryLight 
+                    p-2 hover:bg-opacity-10 hover:rounded-md"
+                >
+                    <IoLogoLinkedin /><span class="ml-2">@ruben-mate</span>
+                </a>
+            </li>
         </ul>
     </section>
 </Layout>
