@@ -1,0 +1,11 @@
+---
+export interface Props {
+	paddingValue: number;
+}
+
+const { paddingValue } = Astro.props as Props;
+let padding = `p-${paddingValue ? paddingValue : 2}`
+---
+<button class={`flex items-center ${padding} bg-primaryLight rounded-md text-white hover:bg-opacity-90`}>
+    <slot/>
+</button>

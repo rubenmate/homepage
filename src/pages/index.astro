@@ -1,8 +1,11 @@
 ---
+import { IoArrowForward } from "react-icons/io5/index"
+
 import Layout from '../layouts/Layout.astro';
 import AvatarImage from '../components/AvatarImage.astro';
 import Skills from '../components/Skills.astro';
 import Heading from '../components/Heading.astro';
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="ruben-mate">
@@ -26,7 +29,11 @@ import Heading from '../components/Heading.astro';
             My developer workflow revolves around the terminal and I have my own Neovim config and dotfiles.
             Thanks for stopping by!
         </p>
-        <button>Check my latest blog posts! ChevRightIcon</button>
+        <a href="/posts" class="flex justify-center my-2">
+            <Button>
+                <span class="mr-2">Check my latest blog posts! </span><IoArrowForward />
+            </Button>
+        </a>
     </section>
     <div class="h-7" />
 

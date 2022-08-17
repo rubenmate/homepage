@@ -1,5 +1,6 @@
 ---
 import { IoMoon,/* IoSunnyOutline, */IoLogoGithub } from "react-icons/io5/index";
+import Button from "./Button.astro";
 ---
 <header class="fixed z-10 w-full">
     <nav class="flex justify-between items-center max-w-4xl mx-auto p-2 backdrop-blur-md">
@@ -25,9 +26,9 @@ import { IoMoon,/* IoSunnyOutline, */IoLogoGithub } from "react-icons/io5/index"
                         <span>GitHub</span>
                     </a>
                 </li>
-                <button class="p-3 bg-primaryLight rounded-md text-white hover:bg-opacity-90">
+                <Button paddingValue={3}>
                     <IoMoon/>
-                </button>
+                </Button>
             </ul>
         </div>
     </nav>
