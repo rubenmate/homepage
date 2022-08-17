@@ -1,5 +1,6 @@
 ---
 import { IoMoon,/* IoSunnyOutline, */IoLogoGithub } from "react-icons/io5/index";
+import HeaderLink from "./HeaderLink.astro";
 ---
 <header class="fixed z-10 w-full">
     <nav class="flex justify-between items-center max-w-4xl mx-auto p-2 backdrop-blur-md">
@@ -11,10 +12,10 @@ import { IoMoon,/* IoSunnyOutline, */IoLogoGithub } from "react-icons/io5/index"
         <div>
             <ul class="flex flex-row items-center space-x-5 font-semibold">
                 <li class="hover:underline">
-                    <a href="/posts">Posts</a>
+                    <HeaderLink href='/blog'>Blog</HeaderLink>
                 </li>
                 <li class="hover:underline">
-                    <a href="/contact">Contact</a>
+                    <HeaderLink href="/contact">Contact</HeaderLink>
                 </li>
                 <li class="hover:underline">
                     <a 
