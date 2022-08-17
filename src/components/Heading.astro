@@ -1,0 +1,11 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+<h2 class="font-['M_Plus_Rounded_1c'] text-2xl font-bold underline underline-offset-8
+    decoration-4 decoration-slate-600">
+    {title}
+</h2>
