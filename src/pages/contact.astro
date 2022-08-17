@@ -1,0 +1,22 @@
+---
+import { AiTwotoneMail } from "react-icons/ai/index"
+import Heading from "../components/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="ruben-mate">
+    <div class="h-14" />
+    <section class="flex flex-col">
+        <Heading title="Contact" />
+        <div class="flex items-center justify-center text-lg">
+            You can reach me at&nbsp;
+            <a
+                href='mailto:contacto@rubenmate.com'
+                class="flex flex-row items-center font-bold text-lg text-primaryLight hover:bg-primaryLight 
+                p-2 hover:bg-opacity-10 hover:rounded-md"
+            >
+                <span class="mr-2">contacto@rubenmate.com</span>
+                <AiTwotoneMail />
+            </a>
+        </div>
+    </section>
+</Layout>
