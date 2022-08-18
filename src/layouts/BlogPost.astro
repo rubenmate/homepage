@@ -1,0 +1,143 @@
+---
+import Layout from "./Layout.astro";
+
+export interface Props {
+	content: {
+		title: string;
+		description: string;
+		pubDate?: string;
+		updatedDate?: string;
+		heroImage?: string;
+	};
+}
+
+const {
+	content: { title, description, pubDate, updatedDate, heroImage },
+} = Astro.props as Props;
+---
+
+<Layout title={title}>
+    <article>
+        {heroImage && (
+            <img
+                src={heroImage}
+                alt=""
+                class="w-[720px] h-[360px] mx-auto"
+            />
+        )}
+        <h1 class="text-4xl text-primaryLight font-bold mt-5">{title}</h1>
+        <p class="my-2">{description}</p>
+        {pubDate && <time>{pubDate}</time>}
+        {updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
+        <hr class="border-t border-solid border-['#DDD'] my-5"/>
+        <section class="w-11/12 mx-auto text-lg">
+            <slot />
+        </section>
+    </article>
+</Layout>
+<style>
+  /* Markdown styles */
+  section :global(h1) {
+      font-weight: 700;
+      font-size: 2em;
+      margin-top: 1em;
+      margin-bottom: .75em;
+  }
+
+  section :global(h2) {
+      font-weight: 700;
+      font-size: 1.5em;
+      margin-top: .75em;
+      margin-bottom: .75em;
+  }
+
+  section :global(h3) {
+      font-weight: 700;
+      font-size: 1.15em;
+      margin-bottom: .75em;
+  }
+
+  section :global(h4) {
+      font-weight: 700;
+      font-size: .9em;
+      margin-bottom: .75em;
+  }
+
+  section :global(h5) {
+      font-weight: 700;
+      font-size: .8em;
+      margin-bottom: .75em;
+  }
+  
+  section :global(h6) {
+      font-weight: 700;
+      font-size: .75em;
+      margin-bottom: .75em;
+  }
+  
+  section :global(p) {
+      margin-bottom: .75em;
+      text-align: justify;
+  }
+
+  section :global(a) {
+      text-decoration: underline;
+      color: #6B46C1;
+      font-weight: 700;
+  }
+  
+  section :global(ol) {
+      list-style-type: decimal;
+      margin-left: 2em;
+      margin-bottom: .75em;
+  }
+
+  section :global(ul) {
+      list-style-type: disc;
+      margin-left: 1.25em;
+      margin-bottom: .75em;
+  }
+
+  section :global(blockquote) {
+      border: 1px solid #999;
+      color: #222;
+      padding: 1em;
+      margin: 0px;
+      font-style: italic;
+      margin-bottom: .75em;
+  }
+
+  section :global(blockquote > p) {
+      margin-bottom: 0;
+  }
+
+  section :global(table) {
+      text-align: left;
+      width: 100%;
+      margin-bottom: .75em;
+  }
+
+  section :global(.astro-code) {
+      font-family: JetBrains Mono;
+      font-size: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: .4%;
+      margin-bottom: .75em;
+  }
+
+  section :global(code) {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+      border-radius: 16%;
+  }
+
+  section :global(pre > code) {
+    padding: 0;
+    background-color: transparent;
+  }
+
+
+</style>
