@@ -15,7 +15,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
             <ul class="w-11/12 mx-auto">
                 {posts.map((post) => (
                     <a href={post.url}>
-                        <li class="flex flex-col mb-4 w-10/12 p-2 rounded-md hover:bg-primaryLight
+                        <li class="flex flex-col mb-3 w-10/12 mx-auto p-2 rounded-md hover:bg-primaryLight
                             hover:bg-opacity-10">
                             <h2 class="font-bold text-2xl">{post.frontmatter.title}</h2>
                             <p>{post.frontmatter.description}</p>
