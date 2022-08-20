@@ -10,7 +10,7 @@ function Drawer() {
                     <IoMenu />
                 </div>
             </Menu.Button>
-            <Menu.Items className="fixed top-[60px] right-0 flex flex-col bg-white rounded-md p-1 border border-slate-200">
+            <Menu.Items className="fixed top-[60px] right-0 mr-2 flex flex-col bg-white rounded-md p-1 border border-slate-200">
                 <Menu.Item>
                     {({ active }) => (
                         <a
