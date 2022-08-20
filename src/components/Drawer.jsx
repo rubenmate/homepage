@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react";
-import { IoMenu } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5/index";
 
 function Drawer() {
     return (
