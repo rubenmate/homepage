@@ -4,12 +4,12 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 <header class="fixed z-10 w-full">
     <nav class="flex justify-between items-center max-w-4xl mx-auto p-2 backdrop-blur-md">
-        <div class="px-2 py-1 rounded-md hover:bg-gray-100">
+        <div class="px-2 pb-1 rounded-md hover:bg-gray-100 bg-white bg-opacity-20">
             <a href="/">
                 <h1 class="text-4xl font-bold font-['M_Plus_Rounded_1c']">rm.</h1>
             </a>
         </div>
-        <div>
+        <div class="hidden md:block">
             <ul class="flex flex-row items-center space-x-5 font-semibold">
                 <li class="hover:underline">
                     <HeaderLink href='/blog'>Blog</HeaderLink>
@@ -21,7 +21,7 @@ import HeaderLink from "./HeaderLink.astro";
                     <a 
                         href="https://github.com/rubenmate" 
                         target="_blank" 
-                        class="flex items-center space-x-1 p-[.35rem] bg-white bg-opacity-40 rounded-md">
+                        class="flex items-center space-x-1 p-[.35rem] bg-white bg-opacity-20 rounded-md">
                         <IoLogoGithub/>
                         <span>GitHub</span>
                     </a>
@@ -30,6 +30,12 @@ import HeaderLink from "./HeaderLink.astro";
                     <IoMoon/>
                 </button>
             </ul>
+        </div>
+
+        <div class="md:hidden flex flex-row">
+            <button class="p-3 bg-primaryLight rounded-md text-white hover:bg-opacity-90">
+                <IoMoon/>
+            </button>
         </div>
     </nav>
 </header>

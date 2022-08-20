@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import { IoArrowBack } from "react-icons/io5";
 
 export interface Props {
 	content: {
@@ -17,26 +18,28 @@ const {
 ---
 
 <Layout title={title}>
-    <article>
-        {heroImage && (
-            <img
-                src={heroImage}
-                alt=""
-                class="w-[720px] h-[360px] mx-auto"
-            />
-        )}
+    {heroImage && (
+        <img
+            src={heroImage}
+            alt=""
+            class="md:w-[720px] md:h-[360px] mx-auto"
+        />
+    )}
+    <section class="w-11/12 mx-auto">
         <h1 class="text-4xl text-primaryLight font-bold mt-5">{title}</h1>
         <p class="my-2">{description}</p>
         <div class="flex">
             {pubDate && <time class="italic">{pubDate}</time>}
-            <a href="/blog" class="ml-auto text-primaryLight underline font-bold">Go back</a>
+            <a href="/blog" class="ml-auto flex items-center space-x-1 text-primaryLight underline font-bold">
+                <IoArrowBack /><div>Go back</div>
+            </a>
         </div>
         {updatedDate && <div class="italic">Last updated on <time>{updatedDate}</time></div>}
-        <hr class="border-t border-solid border-['#DDD'] my-5"/>
-        <section class="w-11/12 mx-auto text-lg">
-            <slot />
-        </section>
-    </article>
+    </section>
+    <hr class="border-t border-solid border-['#DDD'] my-5"/>
+    <section class="w-11/12 mx-auto text-lg">
+        <slot />
+    </section>
 </Layout>
 <style>
 html {
@@ -83,7 +86,6 @@ html {
   
   section :global(p) {
       margin-bottom: .75em;
-      text-align: justify;
   }
 
   section :global(a) {
@@ -102,6 +104,12 @@ html {
       list-style-type: disc;
       margin-left: 1.25em;
       margin-bottom: .75em;
+  }
+
+  section :global(iframe) {
+      margin-left: auto;
+      margin-right: auto;
+    max-width: 100%;
   }
 
   section :global(blockquote) {
