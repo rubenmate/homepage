@@ -54,11 +54,11 @@ import Projects from "../components/Projects.astro";
     <section>
         <Heading title="Web presence" />
         <div class="h-3"/>
-        <ul class="w-11/12 mx-auto flex flex-row space-x-6">
+        <ul class="w-11/12 mx-auto flex flex-col md:flex-row md:space-x-6">
             <li>
                 <a
                     href="https://github.com/rubenmate" target="_blank" 
-                    class="flex flex-row items-center text-lg text-primaryLight hover:bg-primaryLight 
+                    class="w-1/2 md:w-full flex flex-row items-center md:text-lg text-primaryLight hover:bg-primaryLight 
                     p-2 hover:bg-opacity-10 hover:rounded-md"
                 >
                     <IoLogoGithub /><span class="ml-2">@rubenmate</span>
@@ -67,7 +67,7 @@ import Projects from "../components/Projects.astro";
             <li>
                 <a
                     href="https://www.linkedin.com/in/ruben-mate" target="_blank" 
-                    class="flex flex-row items-center text-lg text-primaryLight hover:bg-primaryLight 
+                    class="w-1/2 md:w-full flex flex-row items-center md:text-lg text-primaryLight hover:bg-primaryLight 
                     p-2 hover:bg-opacity-10 hover:rounded-md"
                 >
                     <IoLogoLinkedin /><span class="ml-2">@ruben-mate</span>
