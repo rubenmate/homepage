@@ -12,9 +12,10 @@ import Projects from "../components/Projects.astro";
 <Layout title="ruben-mate">
     <div class="h-7" />
 
-    <section class="w-11/12 mx-auto bg-primaryLight rounded-md text-white text-center p-2">
+    <section class="w-11/12 mx-auto bg-primaryLight dark:bg-primaryDark rounded-md text-white
+        dark:text-black text-center p-2">
         Hello, my name is 
-        <code class="border border-white rounded-sm p-1">Rubén Maté</code>
+        <code class="border border-white dark:border-black rounded-sm p-1">Rubén Maté</code>
         and I'm a front end developer from Spain
     </section>
     <div class="h-7" />
@@ -33,7 +34,7 @@ import Projects from "../components/Projects.astro";
             My developer workflow revolves around the terminal and I have my own 
             <a
                 href="https://github.com/rubenmate/dotfiles" target="_blank" 
-                class="text-primaryLight hover:underline font-bold">Neovim config and dotfiles</a>{'.'}
+                class="text-primaryLight dark:text-primaryDark hover:underline font-bold">Neovim config and dotfiles</a>{'.'}
             <br/>
             Thanks for stopping by!
         </p>
@@ -58,8 +59,9 @@ import Projects from "../components/Projects.astro";
             <li>
                 <a
                     href="https://github.com/rubenmate" target="_blank" 
-                    class="w-1/2 md:w-full flex flex-row items-center md:text-lg text-primaryLight hover:bg-primaryLight 
-                    p-2 hover:bg-opacity-10 hover:rounded-md"
+                    class="w-1/2 md:w-full flex flex-row items-center md:text-lg text-primaryLight
+                    dark:text-primaryDark hover:bg-primaryLight dark:hover:bg-primaryDark
+                    p-2 hover:bg-opacity-10 dark:hover:bg-opacity-10 hover:rounded-md"
                 >
                     <IoLogoGithub /><span class="ml-2">@rubenmate</span>
                 </a>
@@ -67,8 +69,9 @@ import Projects from "../components/Projects.astro";
             <li>
                 <a
                     href="https://www.linkedin.com/in/ruben-mate" target="_blank" 
-                    class="w-1/2 md:w-full flex flex-row items-center md:text-lg text-primaryLight hover:bg-primaryLight 
-                    p-2 hover:bg-opacity-10 hover:rounded-md"
+                    class="w-1/2 md:w-full flex flex-row items-center md:text-lg text-primaryLight
+                    dark:text-primaryDark hover:bg-primaryLight dark:hover:bg-primaryDark
+                    p-2 hover:bg-opacity-10 dark:hover:bg-opacity-10 hover:rounded-md"
                 >
                     <IoLogoLinkedin /><span class="ml-2">@ruben-mate</span>
                 </a>

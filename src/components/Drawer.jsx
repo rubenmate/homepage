@@ -10,12 +10,13 @@ function Drawer() {
                     <IoMenu />
                 </div>
             </Menu.Button>
-            <Menu.Items className="fixed top-[60px] right-0 mr-2 flex flex-col bg-white rounded-md p-1 border border-slate-200">
+            <Menu.Items className="fixed top-[60px] right-0 mr-2 flex flex-col bg-white dark:bg-blackish rounded-md p-1 border border-slate-200 dark:border-slate-800">
                 <Menu.Item>
                     {({ active }) => (
                         <a
                             className={`${
-                                active && "bg-primaryLight text-white rounded-md"
+                                active &&
+                                "bg-primaryLight dark:bg-primaryDark text-white dark:text-black rounded-md"
                             } py-2 px-4 `}
                             href="/blog"
                         >
@@ -27,7 +28,8 @@ function Drawer() {
                     {({ active }) => (
                         <a
                             className={`${
-                                active && "bg-primaryLight text-white rounded-md"
+                                active &&
+                                "bg-primaryLight dark:bg-primaryDark text-white dark:text-black rounded-md"
                             } py-2 px-4`}
                             href="/contact"
                         >
