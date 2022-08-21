@@ -1,12 +1,12 @@
 ---
-import { IoMoon,/* IoSunnyOutline, */IoLogoGithub, IoSunny } from "react-icons/io5/index";
+import { IoLogoGithub } from "react-icons/io5/index";
 import Drawer from "./Drawer";
 import HeaderLink from "./HeaderLink.astro";
 ---
 
 <header class="fixed z-10 w-full">
     <nav class="flex justify-between items-center max-w-4xl mx-auto p-2 backdrop-blur-md">
-        <div class="px-2 pb-1 rounded-md hover:bg-gray-100 bg-white bg-opacity-20">
+        <div class="px-2 pb-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 bg-white dark:bg-blackish bg-opacity-20">
             <a href="/">
                 <h1 class="text-4xl font-bold font-['M_Plus_Rounded_1c']">rm.</h1>
             </a>
@@ -23,22 +23,15 @@ import HeaderLink from "./HeaderLink.astro";
                     <a 
                         href="https://github.com/rubenmate" 
                         target="_blank" 
-                        class="flex items-center space-x-1 p-[.35rem] bg-white bg-opacity-20 rounded-md">
+                        class="flex items-center space-x-1 p-[.35rem] bg-white dark:bg-blackish bg-opacity-20 rounded-md">
                         <IoLogoGithub/>
                         <span>GitHub</span>
                     </a>
                 </li>
-                <button class="p-3 bg-primaryLight rounded-md text-white hover:bg-opacity-90">
-                    <IoMoon/>
-                </button>
             </ul>
         </div>
 
         <div class="md:hidden flex flex-row space-x-2">
-            <button class="p-3 bg-primaryLight dark:bg-primaryDark rounded-md text-white
-                dark:text-black hover:bg-opacity-90">
-                <IoMoon/>
-            </button>
             <div>
                 <Drawer client:load/>
             </div>

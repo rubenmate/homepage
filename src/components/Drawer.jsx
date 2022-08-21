@@ -5,12 +5,20 @@ function Drawer() {
     return (
         <Menu>
             <Menu.Button>
-                <div className="flex items-center text-2xl rounded-md p-2 justify-center hover:bg-neutral-600 hover:text-neutral-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-neutral-50">
+                <div
+                    className="flex items-center text-2xl rounded-md p-2 justify-center 
+                    border border-gray-200 dark:border-gray-800
+                    hover:bg-neutral-600 hover:text-neutral-100 focus:outline-none focus:ring-2 
+                    focus-ring-inset focus:ring-neutral-50"
+                >
                     <span className="sr-only">Open main menu</span>
                     <IoMenu />
                 </div>
             </Menu.Button>
-            <Menu.Items className="fixed top-[60px] right-0 mr-2 flex flex-col bg-white dark:bg-blackish rounded-md p-1 border border-slate-200 dark:border-slate-800">
+            <Menu.Items
+                className="fixed top-[60px] right-0 mr-2 flex flex-col bg-white 
+                dark:bg-blackish rounded-md p-1 border border-slate-200 dark:border-slate-800"
+            >
                 <Menu.Item>
                     {({ active }) => (
                         <a

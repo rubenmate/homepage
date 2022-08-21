@@ -3,5 +3,8 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
 
 const { href, class: className, ...props } = Astro.props as Props;
 const isActive = href === Astro.url.pathname;
+
+const activeItemClasses = 'bg-primaryLight dark:bg-primaryDark rounded-sm p-2 text-white dark:text-black'
+const notActiveItemClasses ='p-2 bg-white dark:bg-blackish bg-opacity-20 rounded-md' 
 ---
-<a href={href} class={isActive ? 'bg-primaryLight rounded-sm p-2 text-white' : 'p-2 bg-white bg-opacity-20 rounded-md'} {...props}><slot /></a>
+<a href={href} class={isActive ?  activeItemClasses : notActiveItemClasses } {...props}><slot /></a>
