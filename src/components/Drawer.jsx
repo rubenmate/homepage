@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react";
-import { IoMenu } from "react-icons/io5/index";
+import { IoLogoGithub, IoMenu, IoLogoRss } from "react-icons/io5/index";
 
 function Drawer() {
     return (
@@ -22,10 +22,9 @@ function Drawer() {
                 <Menu.Item>
                     {({ active }) => (
                         <a
-                            className={`${
-                                active &&
+                            className={`${active &&
                                 "bg-primaryLight dark:bg-primaryDark text-white dark:text-black rounded-md"
-                            } py-2 px-4 `}
+                                } py-2 px-4 `}
                             href="/blog"
                         >
                             Blog
@@ -35,13 +34,39 @@ function Drawer() {
                 <Menu.Item>
                     {({ active }) => (
                         <a
-                            className={`${
-                                active &&
+                            className={`${active &&
                                 "bg-primaryLight dark:bg-primaryDark text-white dark:text-black rounded-md"
-                            } py-2 px-4`}
+                                } py-2 px-4`}
                             href="/contact"
                         >
                             Contact
+                        </a>
+                    )}
+                </Menu.Item>
+                <Menu.Item>
+                    {({ active }) => (
+                        <a
+                            className={`${active &&
+                                "bg-primaryLight dark:bg-primaryDark text-white dark:text-black rounded-md"
+                                } flex items-center space-x-1 py-2 px-4`}
+                            href="https://github.com/rubenmate"
+                            target="_blank"
+                        >
+                            <IoLogoGithub />
+                            <span>GitHub</span>
+                        </a>
+                    )}
+                </Menu.Item>
+                <Menu.Item>
+                    {({ active }) => (
+                        <a
+                            className={`${active &&
+                                "bg-primaryLight dark:bg-primaryDark text-white dark:text-black rounded-md"
+                                } flex items-center space-x-1 py-2 px-4`}
+                            href="/rss.xml"
+                        >
+                            <IoLogoRss />
+                            <span>RSS</span>
                         </a>
                     )}
                 </Menu.Item>

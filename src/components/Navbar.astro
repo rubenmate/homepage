@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon'
 import { IoLogoGithub } from "react-icons/io5/index";
 import Drawer from "./Drawer";
 import HeaderLink from "./HeaderLink.astro";
@@ -26,6 +27,17 @@ import HeaderLink from "./HeaderLink.astro";
                         class="flex items-center space-x-1 p-[.35rem] bg-white dark:bg-blackish bg-opacity-20 rounded-md">
                         <IoLogoGithub/>
                         <span>GitHub</span>
+                    </a>
+                </li>
+                <li class="hover:underline">
+                    <a 
+                        href="/rss.xml" 
+                        target="_blank" 
+                        class="flex items-center space-x-1 p-[.35rem] bg-white dark:bg-blackish
+                        bg-opacity-20 rounded-md">
+                            <Icon pack="ion" name="logo-rss" class="w-4 h-4" />
+                            <!-- Shorthand for reference <Icon name="ion:logo-rss" /> -->
+                            <span>RSS</span>
                     </a>
                 </li>
             </ul>
