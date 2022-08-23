@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 
 import react from "@astrojs/react";
 
@@ -8,6 +9,7 @@ export default defineConfig({
     integrations: [tailwind(), react()],
     site: "https://rubenmate.com",
     markdown: {
+        remarkPlugins: [remarkReadingTime],
         shikiConfig: {
             // Choose from Shiki's built-in themes (or add your own)
             // https://github.com/shikijs/shiki/blob/main/docs/themes.md
