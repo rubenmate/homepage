@@ -29,9 +29,11 @@ const {
     <section class="w-11/12 mx-auto">
         <h1 class="text-4xl text-primaryLight dark:text-primaryDark font-bold mt-5">{title}</h1>
         <p class="text-xl my-2">{description}</p>
-        <div class="">{minutesRead}</div>
         <div class="flex mt-2">
-            {pubDate && <time class="italic underline">{pubDate}</time>}
+            <div class="flex space-x-4 text-slate-700 dark:text-slate-500">
+                {pubDate && <time class="">{pubDate}</time>}
+                <div class="italic">{minutesRead}</div>
+            </div>
             <a href="/blog" class="ml-auto flex items-center space-x-1 text-primaryLight
                 dark:text-primaryDark underline font-bold">
                 <IoArrowBack /><div>Go back</div>

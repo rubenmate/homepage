@@ -9,7 +9,7 @@ export default defineConfig({
     integrations: [tailwind(), react()],
     site: "https://rubenmate.com",
     markdown: {
-        remarkPlugins: [remarkReadingTime],
+        remarkPlugins: ["remark-gfm", "remark-smartypants", remarkReadingTime], // first two are defaults, don't override them
         shikiConfig: {
             // Choose from Shiki's built-in themes (or add your own)
             // https://github.com/shikijs/shiki/blob/main/docs/themes.md
