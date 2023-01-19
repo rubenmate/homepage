@@ -1,6 +1,8 @@
 ---
 import Layout from "./Layout.astro";
-import { IoArrowBack } from "react-icons/io5/index";
+// import { IoArrowBack } from "react-icons/io5/index";
+import { Icon } from 'astro-icon'
+// 
 
 export interface Props {
 	content: {
@@ -30,13 +32,17 @@ const {
         <h1 class="text-4xl text-primaryLight dark:text-primaryDark font-bold mt-5">{title}</h1>
         <p class="text-xl my-2">{description}</p>
         <div class="flex mt-2">
-            <div class="flex space-x-4 text-slate-700 dark:text-slate-500">
+            <div class="flex space-x-7 text-slate-700 dark:text-slate-500">
                 {pubDate && <time class="">{pubDate}</time>}
-                <div class="italic">{minutesRead}</div>
+                <div class="italic flex items-center">
+                    <Icon name="ion:book-outline " class="w-4 h-4 mr-2" />
+                    {minutesRead}
+                </div>
             </div>
             <a href="/blog" class="ml-auto flex items-center space-x-1 text-primaryLight
                 dark:text-primaryDark underline font-bold">
-                <IoArrowBack /><div>Go back</div>
+                <Icon name="ion:arrow-back" class="w-4 h-4" />
+                <div>Go back</div>
             </a>
         </div>
         {updatedDate && <div class="italic">Last updated on <time>{updatedDate}</time></div>}
